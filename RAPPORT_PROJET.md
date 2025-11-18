@@ -333,6 +333,8 @@ Ces tableaux permettent une analyse rapide des tendances.
 
 **Fichier** : `visualizations/eda_crime_category_distribution.png`
 
+![Distribution des Catégories de Crimes](visualizations/eda_crime_category_distribution.png)
+
 **Graphique** : Diagramme circulaire (Pie Chart)
 
 **Insights** :
@@ -347,6 +349,8 @@ Ces tableaux permettent une analyse rapide des tendances.
 #### Visualisation 2 : Top 10 des Types de Crimes
 
 **Fichier** : `visualizations/eda_top10_crime_types.png`
+
+![Top 10 des Types de Crimes](visualizations/eda_top10_crime_types.png)
 
 **Graphique** : Barres horizontales
 
@@ -365,6 +369,8 @@ Ces tableaux permettent une analyse rapide des tendances.
 
 **Fichier** : `visualizations/eda_time_series_trends.png`
 
+![Évolution Temporelle 2020-2023](visualizations/eda_time_series_trends.png)
+
 **Graphique** : Ligne temporelle avec tendance
 
 **Observations** :
@@ -380,6 +386,8 @@ Ces tableaux permettent une analyse rapide des tendances.
 #### Visualisation 4 : Carte Géographique des Crimes
 
 **Fichier** : `visualizations/eda_geographic_distribution.png`
+
+![Distribution Géographique des Crimes](visualizations/eda_geographic_distribution.png)
 
 **Graphique** : Carte de chaleur (Heatmap) et barres
 
@@ -400,6 +408,8 @@ Ces tableaux permettent une analyse rapide des tendances.
 
 **Fichier** : `visualizations/eda_temporal_patterns.png`
 
+![Patterns Temporels par Heure](visualizations/eda_temporal_patterns.png)
+
 **Graphique** : Diagramme circulaire + Histogramme horaire
 
 **Distribution par période** :
@@ -418,6 +428,8 @@ Ces tableaux permettent une analyse rapide des tendances.
 
 **Fichier** : `visualizations/eda_victim_demographics.png`
 
+![Démographie des Victimes](visualizations/eda_victim_demographics.png)
+
 **Graphique** : Histogramme de distribution d'âge
 
 **Insights** :
@@ -435,6 +447,8 @@ Ces tableaux permettent une analyse rapide des tendances.
 
 **Fichier** : `visualizations/eda_correlation_heatmap.png`
 
+![Matrice de Corrélation](visualizations/eda_correlation_heatmap.png)
+
 **Graphique** : Heatmap de corrélation
 
 **Corrélations fortes détectées** :
@@ -449,6 +463,8 @@ Ces tableaux permettent une analyse rapide des tendances.
 #### Visualisation 8 : Analyse des Armes
 
 **Fichier** : `visualizations/eda_weapon_analysis.png`
+
+![Analyse des Armes Utilisées](visualizations/eda_weapon_analysis.png)
 
 **Graphique** : Barres horizontales
 
@@ -467,6 +483,8 @@ Ces tableaux permettent une analyse rapide des tendances.
 
 **Fichier** : `visualizations/eda_severity_by_area.png`
 
+![Sévérité des Crimes par Zone](visualizations/eda_severity_by_area.png)
+
 **Graphique** : Barres empilées par zone
 
 **Zones avec % élevé de crimes graves** :
@@ -481,6 +499,8 @@ Ces tableaux permettent une analyse rapide des tendances.
 #### Visualisation 10 : Tendances Année par Année
 
 **Fichier** : `visualizations/eda_year_over_year_trends.png`
+
+![Tendances Année par Année](visualizations/eda_year_over_year_trends.png)
 
 **Graphique** : Lignes multiples (une par catégorie)
 
@@ -610,9 +630,13 @@ model1.fit(X_train, y_train)
 
 **Visualisation** : `visualizations/model1_crime_category_classification.png`
 
+![Modèle 1 - Classification des Catégories](visualizations/model1_crime_category_classification.png)
+
 **Matrice de confusion** : Montre que les erreurs principales sont entre THEFT et OTHER.
 
 #### Features les Plus Importantes
+
+![Importance des Features](visualizations/feature_importance.png)
 
 **Top 5** :
 1. `time_period` : 18.3%
@@ -659,6 +683,8 @@ model2.fit(X_train, y_train)
 **Courbe ROC** :
 - AUC = 0.884 (excellent discriminateur)
 - Visualisation : `visualizations/model2_crime_severity_prediction.png`
+
+![Modèle 2 - Prédiction de Sévérité (ROC)](visualizations/model2_crime_severity_prediction.png)
 
 **Seuil optimal** : 0.48 (maximise F1-Score)
 
@@ -740,6 +766,9 @@ model4.fit(X_train, y_train)
 - MAE = 8.3 : Erreur moyenne de ±8 crimes par jour
 
 **Visualisation** : `visualizations/model4_crime_occurrence_prediction.png`
+
+![Modèle 4 - Prédiction des Occurrences](visualizations/model4_crime_occurrence_prediction.png)
+
 - Graphique : Prédictions vs Valeurs Réelles
 - Bonne adéquation sur la tendance générale
 
