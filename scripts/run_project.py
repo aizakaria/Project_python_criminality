@@ -43,9 +43,9 @@ def check_data_files():
     """Check if data files exist"""
     print("\n📁 Checking data files...")
     files = {
-        'Raw Data': 'Crime_Data_from_2020_to_Present_50k.csv',
-        'Cleaned Data': 'Crime_Data_Cleaned.csv',
-        'Transformed Data': 'Crime_Data_Transformed.csv'
+        'Raw Data': 'data/Crime_Data_from_2020_to_Present_50k.csv',
+        'Cleaned Data': 'data/Crime_Data_Cleaned.csv',
+        'Transformed Data': 'data/Crime_Data_Transformed.csv'
     }
     
     all_exist = True

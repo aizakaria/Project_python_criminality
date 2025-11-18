@@ -50,7 +50,7 @@ st.markdown("""
 @st.cache_data
 def load_data():
     """Load and preprocess the crime data"""
-    df = pd.read_csv('Crime_Data_Transformed.csv')
+    df = pd.read_csv('data/Crime_Data_Transformed.csv')
     df['Date Rptd'] = pd.to_datetime(df['Date Rptd'])
     df['DATE OCC'] = pd.to_datetime(df['DATE OCC'])
     return df

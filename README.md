@@ -21,20 +21,48 @@ This comprehensive data analysis project explores crime data from Los Angeles (2
 ```
 Project_python_criminality/
 │
-├── Crime_Data_from_2020_to_Present_50k.csv  # Raw dataset
-├── Crime_Data_Cleaned.csv                    # Cleaned dataset
-├── Crime_Data_Transformed.csv                # Transformed dataset with features
+├── data/                                     # 📊 Data files
+│   ├── Crime_Data_from_2020_to_Present_50k.csv  # Raw dataset
+│   ├── Crime_Data_Cleaned.csv                    # Cleaned dataset
+│   ├── Crime_Data_Transformed.csv                # Transformed dataset with features
+│   ├── Crime_Pivot_Area_Time.csv                 # Pivot table: Area × Time
+│   └── Crime_Pivot_Category_Year.csv             # Pivot table: Category × Year
 │
-├── data_cleaning.ipynb                       # Step 1: Data cleaning & preprocessing
-├── data_transformation.ipynb                 # Step 2: Feature engineering & transformation
-├── exploratory_data_analysis.ipynb          # Step 3: EDA with visualizations
-├── predictive_modeling.ipynb                 # Step 4: Machine learning models
+├── notebooks/                                # 📓 Jupyter Notebooks
+│   ├── data_cleaning.ipynb                       # Step 1: Data cleaning
+│   ├── data_transformation.ipynb                 # Step 2: Feature engineering
+│   ├── exploratory_data_analysis.ipynb          # Step 3: EDA
+│   └── predictive_modeling.ipynb                 # Step 4: ML models
 │
-├── streamlit_app.py                          # Interactive web dashboard
-├── requirements.txt                          # Python dependencies
+├── visualizations/                           # 📈 Generated plots (PNG)
+│   ├── eda_crime_category_distribution.png
+│   ├── eda_temporal_patterns.png
+│   └── ... (10+ visualizations)
 │
-└── README.md                                 # Project documentation
+├── models/                                   # 🤖 Trained ML models
+│   ├── crime_category_classifier_model.pkl
+│   ├── crime_severity_classifier_model.pkl
+│   └── ... (5 models total)
+│
+├── scripts/                                  # 🐍 Python utilities
+│   ├── run_project.py                            # Interactive menu
+│   ├── test_environment.py                       # Environment test
+│   └── demo_predictions.py                       # Model demos
+│
+├── docs/                                     # 📚 Documentation
+│   ├── QUICK_START.md                            # Quick start guide
+│   ├── KEY_INSIGHTS_REPORT.md                    # Detailed findings
+│   ├── PRESENTATION_GUIDE.md                     # Presentation help
+│   └── PROJECT_SUMMARY.md                        # Complete summary
+│
+├── streamlit_app.py                          # 🌐 Interactive dashboard
+├── launch.py                                 # 🚀 Quick launcher
+├── requirements.txt                          # 📦 Dependencies
+├── ARCHITECTURE.md                           # 🏗️ Architecture doc
+└── README.md                                 # 📖 This file
 ```
+
+> 💡 **See [ARCHITECTURE.md](ARCHITECTURE.md) for detailed project architecture**
 
 ---
 
