@@ -972,8 +972,6 @@ with tab4:
         st.markdown("#### 📊 Statistiques")
         st.metric("Âge Moyen", f"{filtered_df['Vict Age'].mean():.1f} ans")
         st.metric("Âge Médian", f"{filtered_df['Vict Age'].median():.0f} ans")
-        st.metric("Âge Min", f"{filtered_df['Vict Age'].min():.0f} ans")
-        st.metric("Âge Max", f"{filtered_df['Vict Age'].max():.0f} ans")
         st.metric("Écart-type", f"{filtered_df['Vict Age'].std():.1f}")
     
     st.markdown("---")
