@@ -145,7 +145,7 @@ def install_dependencies():
     print("=" * 80)
     
     if not os.path.exists('requirements.txt'):
-        print("❌ requirements.txt not found!")
+        print("❌ requirements.txt not found")
         return
     
     print("\n🔄 Running: pip install -r requirements.txt\n")

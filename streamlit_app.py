@@ -1065,7 +1065,7 @@ with tab5:
             weapon_pct = 0
         
         if weapon_pct > 50:
-            st.error(f"⚠️ **{weapon_pct:.1f}%** des crimes impliquent des armes !")
+            st.error(f"⚠️ **{weapon_pct:.1f}%** des crimes impliquent des armes")
         elif weapon_pct > 30:
             st.warning(f"⚠️ **{weapon_pct:.1f}%** des crimes impliquent des armes")
         else:
