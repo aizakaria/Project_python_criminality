@@ -67,8 +67,7 @@ def main_menu():
     print("2. 📓 Open Jupyter Notebooks")
     print("3. 🔍 Check Project Status")
     print("4. 📦 Install Dependencies")
-    print("5. 📈 View Model Performance Summary")
-    print("6. ❌ Exit")
+    print("5. ❌ Exit")
     print()
 
 def run_streamlit():
@@ -101,8 +100,7 @@ def open_jupyter():
     notebooks = [
         'data_cleaning.ipynb',
         'data_transformation.ipynb',
-        'exploratory_data_analysis.ipynb',
-        'predictive_modeling.ipynb'
+        'exploratory_data_analysis.ipynb'
     ]
     
     for i, nb in enumerate(notebooks, 1):
@@ -121,7 +119,6 @@ def project_status():
         ('Data Cleaning', 'data_cleaning.ipynb', 'Crime_Data_Cleaned.csv'),
         ('Data Transformation', 'data_transformation.ipynb', 'Crime_Data_Transformed.csv'),
         ('Exploratory Data Analysis', 'exploratory_data_analysis.ipynb', None),
-        ('Predictive Modeling', 'predictive_modeling.ipynb', None),
         ('Streamlit Dashboard', 'streamlit_app.py', None)
     ]
     
@@ -158,48 +155,26 @@ def install_dependencies():
     except Exception as e:
         print(f"\n❌ Error installing dependencies: {e}")
 
-def model_summary():
-    """Display model performance summary"""
-    print("\n📈 MODEL PERFORMANCE SUMMARY")
+def view_visualizations():
+    """View generated visualizations"""
+    print("\n📊 GENERATED VISUALIZATIONS")
     print("=" * 80)
     
-    models = [
-        {
-            'name': 'Crime Category Classification',
-            'algorithm': 'Random Forest',
-            'metric': 'F1-Score',
-            'score': '0.85+',
-            'task': 'Multi-class classification'
-        },
-        {
-            'name': 'Crime Severity Prediction',
-            'algorithm': 'Gradient Boosting',
-            'metric': 'AUC-ROC',
-            'score': '0.88+',
-            'task': 'Binary classification'
-        },
-        {
-            'name': 'Weapon Involvement',
-            'algorithm': 'Random Forest',
-            'metric': 'F1-Score',
-            'score': '0.82+',
-            'task': 'Binary classification'
-        },
-        {
-            'name': 'Crime Occurrence Forecasting',
-            'algorithm': 'Random Forest Regressor',
-            'metric': 'R²',
-            'score': '0.75+',
-            'task': 'Time series regression'
-        },
-        {
-            'name': 'Area Risk Score',
-            'algorithm': 'Gradient Boosting Regressor',
-            'metric': 'R²',
-            'score': '0.80+',
-            'task': 'Regression'
-        }
-    ]
+    viz_dir = 'visualizations'
+    if not os.path.exists(viz_dir):
+        print("\n❌ Visualizations directory not found!")
+        return
+    
+    viz_files = [f for f in os.listdir(viz_dir) if f.endswith('.png')]
+    
+    if not viz_files:
+        print("\n⚠️  No visualizations found!")
+        print("💡 Run the exploratory_data_analysis.ipynb notebook to generate visualizations")
+        return
+    
+    print(f"\n✅ Found {len(viz_files)} visualizations:")
+    for viz in sorted(viz_files):
+        print(f"  • {viz}")
     
     for i, model in enumerate(models, 1):
         print(f"\n{i}. {model['name']}")
@@ -224,7 +199,7 @@ def main():
     
     while True:
         main_menu()
-        choice = input("Enter your choice (1-6): ").strip()
+        choice = input("Enter your choice (1-5): ").strip()
         
         if choice == '1':
             run_streamlit()
@@ -235,8 +210,6 @@ def main():
         elif choice == '4':
             install_dependencies()
         elif choice == '5':
-            model_summary()
-        elif choice == '6':
             print("\n👋 Thank you for using Crime Data Analysis Project!")
             print("=" * 80)
             break

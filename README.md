@@ -2,7 +2,7 @@
 
 ## 📊 Project Overview
 
-This comprehensive data analysis project explores crime data from Los Angeles (2020 to Present), applying advanced data science techniques including data cleaning, transformation, exploratory data analysis, machine learning, and interactive visualization.
+This comprehensive data analysis project explores crime data from Los Angeles (2020 to Present), applying data science techniques including data cleaning, transformation, exploratory data analysis, and interactive visualization.
 
 ---
 
@@ -10,7 +10,6 @@ This comprehensive data analysis project explores crime data from Los Angeles (2
 
 - Clean and preprocess large-scale crime datasets
 - Perform comprehensive exploratory data analysis (EDA)
-- Develop predictive models for crime forecasting
 - Create interactive dashboards for data visualization
 - Generate insights for law enforcement and policy makers
 
@@ -31,23 +30,16 @@ Project_python_criminality/
 ├── notebooks/                                # 📓 Jupyter Notebooks
 │   ├── data_cleaning.ipynb                       # Step 1: Data cleaning
 │   ├── data_transformation.ipynb                 # Step 2: Feature engineering
-│   ├── exploratory_data_analysis.ipynb          # Step 3: EDA
-│   └── predictive_modeling.ipynb                 # Step 4: ML models
+│   └── exploratory_data_analysis.ipynb          # Step 3: EDA
 │
 ├── visualizations/                           # 📈 Generated plots (PNG)
 │   ├── eda_crime_category_distribution.png
 │   ├── eda_temporal_patterns.png
 │   └── ... (10+ visualizations)
 │
-├── models/                                   # 🤖 Trained ML models
-│   ├── crime_category_classifier_model.pkl
-│   ├── crime_severity_classifier_model.pkl
-│   └── ... (5 models total)
-│
 ├── scripts/                                  # 🐍 Python utilities
 │   ├── run_project.py                            # Interactive menu
-│   ├── test_environment.py                       # Environment test
-│   └── demo_predictions.py                       # Model demos
+│   └── test_environment.py                       # Environment test
 │
 ├── docs/                                     # 📚 Documentation
 │   ├── QUICK_START.md                            # Quick start guide
@@ -132,35 +124,6 @@ Project_python_criminality/
 - Weapon involvement analysis
 - Crime severity trends
 
-### Step 4: Predictive Modeling (`predictive_modeling.ipynb`)
-
-Develop 5 machine learning models:
-
-1. **Crime Category Classification**
-   - Predict: Violent, Property, or Other crimes
-   - Best Model: Random Forest
-   - Metrics: Accuracy, F1-Score, Precision, Recall
-
-2. **Crime Severity Prediction**
-   - Predict: Part 1 (Serious) vs Part 2 (Less Serious)
-   - Best Model: Gradient Boosting
-   - Metrics: AUC-ROC, Accuracy
-
-3. **Weapon Involvement Prediction**
-   - Predict: Whether a weapon will be involved
-   - Best Model: Random Forest
-   - Metrics: F1-Score, Precision, Recall
-
-4. **Crime Occurrence Forecasting**
-   - Predict: Number of crimes in future periods
-   - Best Model: Random Forest Regressor
-   - Metrics: MAE, RMSE, R²
-
-5. **Area Risk Score Prediction**
-   - Predict: Risk level for different areas
-   - Best Model: Gradient Boosting Regressor
-   - Metrics: R², MAE, RMSE
-
 ---
 
 ## 🎨 Interactive Dashboard
@@ -234,23 +197,8 @@ The dashboard will open in your browser at `http://localhost:8501`
 
 - **Data Processing**: pandas, numpy
 - **Visualization**: matplotlib, seaborn, plotly
-- **Machine Learning**: scikit-learn
 - **Web Framework**: Streamlit
 - **Development**: Jupyter Notebook
-
----
-
-## 📈 Model Performance
-
-| Model | Task | Best Algorithm | Primary Metric | Score |
-|-------|------|---------------|----------------|-------|
-| Model 1 | Crime Category | Random Forest | F1-Score | 0.85+ |
-| Model 2 | Severity | Gradient Boosting | AUC-ROC | 0.88+ |
-| Model 3 | Weapon | Random Forest | F1-Score | 0.82+ |
-| Model 4 | Occurrence | Random Forest | R² | 0.75+ |
-| Model 5 | Risk Score | Gradient Boosting | R² | 0.80+ |
-
-*Note: Scores are approximate and may vary based on data splits*
 
 ---
 
@@ -262,23 +210,18 @@ The dashboard will open in your browser at `http://localhost:8501`
 import pandas as pd
 
 # Load cleaned data
-df = pd.read_csv('Crime_Data_Cleaned.csv')
+df = pd.read_csv('data/Crime_Data_Cleaned.csv')
 print(df.shape)
 ```
 
-### Load Pre-trained Models
+### Load Transformed Data
 
 ```python
-import joblib
+import pandas as pd
 
-# Load a trained model
-model_info = joblib.load('crime_category_classifier_model.pkl')
-model = model_info['model']
-scaler = model_info['scaler']
-features = model_info['features']
-
-# Make predictions
-predictions = model.predict(scaler.transform(X_new))
+# Load transformed data with features
+df = pd.read_csv('data/Crime_Data_Transformed.csv')
+print(df.columns)
 ```
 
 ---
@@ -289,12 +232,7 @@ predictions = model.predict(scaler.transform(X_new))
    - Connect to live crime data feeds
    - Automated daily updates
 
-2. **Advanced ML Models**
-   - Deep learning models (LSTM, CNN)
-   - Ensemble methods
-   - AutoML implementation
-
-3. **Enhanced Visualizations**
+2. **Enhanced Visualizations**
    - 3D crime mapping
    - Heat maps with animation
    - Network analysis of crime patterns
@@ -345,9 +283,7 @@ For questions or collaboration:
 - ✅ Data Cleaning & Preprocessing
 - ✅ Feature Engineering & Transformation
 - ✅ Exploratory Data Analysis
-- ✅ Predictive Modeling
 - ✅ Interactive Dashboard Development
-- ⏳ Model Deployment
 - ⏳ API Development
 - ⏳ Mobile Application
 

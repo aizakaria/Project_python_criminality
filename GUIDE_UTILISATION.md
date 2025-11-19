@@ -17,9 +17,6 @@ python launch.py menu
 # Test environnement
 python launch.py test
 
-# Démo prédictions
-python launch.py demo
-
 # Notebooks Jupyter
 python launch.py jupyter
 ```
@@ -35,9 +32,6 @@ python scripts/run_project.py
 # Test environnement
 python scripts/test_environment.py
 
-# Démo modèles
-python scripts/demo_predictions.py
-
 # Jupyter
 jupyter notebook notebooks/
 ```
@@ -50,9 +44,8 @@ jupyter notebook notebooks/
 🏠 Racine du projet
 │
 ├── 📊 data/                  → Toutes les données CSV
-├── 📓 notebooks/             → 4 notebooks Jupyter
+├── 📓 notebooks/             → 3 notebooks Jupyter
 ├── 📈 visualizations/        → Graphiques PNG générés
-├── 🤖 models/                → Modèles ML entraînés (.pkl)
 ├── 🐍 scripts/               → Scripts Python utilitaires
 ├── 📚 docs/                  → Documentation complète
 │
@@ -89,28 +82,12 @@ streamlit run streamlit_app.py
 1. `notebooks/data_cleaning.ipynb` (2-3 min)
 2. `notebooks/data_transformation.ipynb` (3-5 min)
 3. `notebooks/exploratory_data_analysis.ipynb` (5-7 min)
-4. `notebooks/predictive_modeling.ipynb` (10-15 min)
 
 **Lancer** :
 ```bash
 python launch.py jupyter
 # ou
 jupyter notebook notebooks/
-```
-
-### 🤖 Modèles ML
-**5 modèles disponibles** :
-- Crime Category Classifier (85% F1)
-- Crime Severity Predictor (88% AUC-ROC)
-- Weapon Involvement (82% F1)
-- Crime Occurrence (75% R²)
-- Area Risk Score (80% R²)
-
-**Tester** :
-```bash
-python launch.py demo
-# ou
-python scripts/demo_predictions.py
 ```
 
 ### 📊 Données
@@ -216,8 +193,8 @@ python scripts/test_environment.py
 # Vérifier les données
 ls -lh data/
 
-# Vérifier les modèles
-ls -lh models/
+# Vérifier les visualisations
+ls -lh visualizations/
 
 # Tester un notebook
 jupyter nbconvert --execute --to notebook notebooks/data_cleaning.ipynb
@@ -280,10 +257,6 @@ head -n 10000 data/Crime_Data_Transformed.csv > data/Crime_Data_Sample.csv
 - `eda_weapon_analysis.png` - Analyse armes
 - `eda_severity_by_area.png` - Sévérité par zone
 - `eda_year_over_year_trends.png` - Tendances annuelles
-- `feature_importance.png` - Importance des features
-- `model1_crime_category_classification.png` - Performance modèle 1
-- `model2_crime_severity_prediction.png` - Performance modèle 2
-- `model4_crime_occurrence_prediction.png` - Performance modèle 4
 
 ---
 

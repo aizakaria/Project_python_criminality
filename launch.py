@@ -8,7 +8,6 @@ Options:
   dashboard   - Launch Streamlit dashboard
   menu        - Interactive menu
   test        - Test environment
-  demo        - Demo predictions
   jupyter     - Open Jupyter notebooks
 """
 
@@ -34,11 +33,6 @@ def test_environment():
     print("🧪 Testing Environment...")
     subprocess.run(["python", "scripts/test_environment.py"])
 
-def demo_predictions():
-    """Run prediction demos"""
-    print("🎯 Running Prediction Demos...")
-    subprocess.run(["python", "scripts/demo_predictions.py"])
-
 def open_jupyter():
     """Open Jupyter notebooks"""
     print("📓 Opening Jupyter Notebooks...")
@@ -62,8 +56,6 @@ def main():
             launch_menu()
         elif option in ['test', 't']:
             test_environment()
-        elif option in ['demo', 'pred', 'p']:
-            demo_predictions()
         elif option in ['jupyter', 'notebook', 'j', 'n']:
             open_jupyter()
         elif option in ['help', 'h', '-h', '--help']:
