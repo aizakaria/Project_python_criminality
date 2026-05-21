@@ -285,7 +285,8 @@ This project is part of an academic assignment and is intended for educational p
 ## 📧 Contact
 
 For questions or collaboration:
-- GitHub: [@aizakaria](https://github.com/aizakaria)
+- GitHub: [@aizakaria](https://github.com/aizakaria) , [@Mahdi08599](https://github.com/Mahdi08599)
+
 - Project Repository: [Project_python_criminality](https://github.com/aizakaria/Project_python_criminality)
 
 ---
